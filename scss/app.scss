@@ -1,8 +1,18 @@
 @import "settings";
-@import "foundation";
+//@import "foundation";
+
+
+@import "foundation/components/grid";
+@import "foundation/components/buttons";
+@import "foundation/components/dropdown";
+@import "foundation/components/top-bar";
+@import "foundation/components/orbit";
+@import "foundation/components/panels";
+@import "foundation/components/forms";
+@import "foundation/components/visibility";
 
 // Or selectively include components
-// @import
+ //@import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
 //   "foundation/components/block-grid",
@@ -38,3 +48,149 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+$text-center: center;
+$text-uppercase: uppercase;
+
+.header,
+.footer,
+.homeComponent {
+    background-color: $primary-color;
+    border: none;
+}
+.header, .footer {    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        display: block;
+        
+        li, li a {
+            display: inline-block;
+            color: $gainsboro;
+            list-style: circle;
+            text-transform: $text-uppercase;
+            text-decoration: none;
+        }
+        li a:hover {
+            color: $white;
+        }
+    }
+}
+.ctaBox {
+    border: 1px solid #dcdddf;
+    border-top: none;
+    float: left;
+    text-align: center;
+    width: 50%;
+    
+    .ctaHeading {
+        background-color: $jumbo;
+
+        h2 {            
+            color: $white;
+            font-weight: $font-weight-normal;
+            margin: 0 0 15px 0;
+            text-align: center;
+            padding: 23px;
+            min-height: 94px;
+        }
+    }
+    img {
+        margin-bottom: 15px;
+    }
+    p {
+        text-align: center;
+        padding: 0 9px;
+    }
+    .button {
+        font-size: 20px;
+        padding: 6px 18px;
+    }
+    .grayBox {
+        float: $opposite-direction;
+        background-color: $monsoon;
+        margin-right: 6px;
+        margin-bottom: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 93%;
+        
+        h4 {            
+            color: $white;
+            font-size: 15px;
+            font-weight: normal;
+            margin: 9px 0;
+        }
+        
+        img {
+            float: left;
+            vertical-align: middle;
+            width: 50px;
+            margin-bottom: 0;
+        }
+    }
+}
+.ctaBox:hover {
+    
+    .ctaHeading {
+        background-color: $warning-color;
+    }
+}
+.contactForm {
+    h4 {
+        color: $black;
+        text-align: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="password"],
+    textarea,
+    select {
+        border-radius: 5px;
+        height: auto;
+        padding:  5px 13px;
+        margin-bottom: 3px;
+    }
+    textarea {
+        resize: none;
+    }
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"],
+    button[type="submit"],
+    button[type="reset"] {
+        padding: 6px 28px;
+    }
+}
+.component {
+    
+    .page-heading {
+        background-color: $warning-color;
+        color: $white;
+        font-weight: $font-weight-normal;
+        display: inline-block;
+        padding: 19px 43px;
+        margin-bottom: 30px;
+        text-transform: $text-uppercase;
+        -webkit-box-shadow: 0 10px 10px 5px rgba(0,0,0,.10);
+        box-shadow: 0 10px 10px 5px rgba(0,0,0,.10);
+    }
+}
+.footer {   
+    
+    text-align: $text-center;
+    
+    p, h4, h4 small {
+        color: $gainsboro;
+    }    
+    .nav li a {
+        font-size: 12px;        
+        padding: 0 14px;
+    }
+    
+}
